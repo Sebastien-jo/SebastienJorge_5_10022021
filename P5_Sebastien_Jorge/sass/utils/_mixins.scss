@@ -1,0 +1,20 @@
+@import "./_animations.scss";
+
+@mixin Button{
+    display: flex;
+    border: none;
+    border-radius: 30px;
+    background: $cd_degrade;
+    height: 40px;
+    align-items: center;
+    margin: 100px 40px;
+    padding: 0 10px;
+    box-shadow: 2px 2px 5px grey;
+    color: #fff;
+    animation: animButtonOff 250ms both ease-in-out;
+    &:hover{
+        opacity: 0.9;
+        box-shadow: 3px 2px 6px grey;
+        animation: animButton 250ms both ease-in-out;
+    }
+}

@@ -1,0 +1,128 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "utils/_variables.scss";
+@import "utils/mixins.scss";
+//règles générales//
+.Bloc_0{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Arial', Times, serif;
+}
+//index//
+//header//
+header{
+    width: 100%;
+    justify-content: space-between;
+    background: $colorTertiary;
+    & .navbar-brand{
+        margin-left: 60px;
+    }
+    & .search{
+        margin: 0 100px 0 100px;
+        & #itemSearch{
+            border: 2px solid $colorSecondary;
+            border-radius: 20px;
+            overflow: hidden;
+            outline: none;
+            padding: 5px 10px;
+        }
+        & button{
+            border-radius: 50px;
+            border: none;
+            background: none;
+        }
+    }
+    & #navbarContent{
+        & a{
+        margin-right: 50px;
+        color: black;
+        font-weight: bold;
+        font-size: 1.2rem;
+        &:hover{
+            color: $colorSecondary;
+        }
+        }
+
+    }
+}
+
+//section index//
+section{
+    &.container{
+        margin: auto;
+        & aside{
+            display: flex;
+            float: left;
+        }
+        & .row{
+            margin-top: 60px;
+            margin-left: 60px;
+            border: 2px solid lighten($color: $colorPrimary, $amount: 6);
+            border-radius: 22px;
+            box-shadow: 2px 2px 10px $colorTertiary;
+            height: 249px;
+            & img{
+                border-radius: 20px 0 0 20px;
+            }
+            & p{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                font-size: 1.2rem
+            }
+            & button{
+                @include Button;
+            }
+        }
+    }
+}
+
+//panier//
+
+.btn{
+    padding: 0;
+    margin: 60px;
+    border-radius: 20px;
+    & a{
+        font-size: 1.3rem;
+        &:hover{
+            text-decoration: none;
+        }
+    & button{
+    @include Button;
+    margin: 0px;
+    padding: 5px 15px;
+    }
+}
+}
+.form-control{
+    width: 50%
+}
+.submit{
+    & .send{
+        @include Button;
+        font-size: 1.3rem;
+        padding: 5px 15px;
+    }
+}
+
+.otherProduct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid lighten($color: $colorPrimary, $amount: 7);
+    border-radius: 25px;
+    padding: 0;
+    box-shadow: 2px 2px 5px grey;
+    & h3{
+        padding: 15px 0;
+        background: lighten($color: $colorPrimary, $amount: 7);
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        color: #fff;
+    }
+    & img{
+        margin: 30px;
+    }
+}
