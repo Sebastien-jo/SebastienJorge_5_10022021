@@ -126,3 +126,12 @@ section{
         margin: 30px;
     }
 }
+
+#main{
+    width: 100%;
+    margin: 0;
+    & img{
+        width: 400px;
+        height: 300px;
+    }
+}

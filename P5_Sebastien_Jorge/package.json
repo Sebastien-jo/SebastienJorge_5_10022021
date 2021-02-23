@@ -1,0 +1,15 @@
+{
+  "name": "p5_sebastien_jorge",
+  "version": "1.0.0",
+  "description": "This is the back end server for Project 5 of the Junior Web Developer path.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./css/style.css --style expanded"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}
