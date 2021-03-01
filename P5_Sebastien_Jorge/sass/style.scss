@@ -3,8 +3,7 @@
 @import "utils/mixins.scss";
 //règles générales//
 .Bloc_0{
-    margin: 0;
-    padding: 0;
+    
     width: 100%;
     font-family: 'Arial', Times, serif;
 }
@@ -34,15 +33,25 @@ header{
     }
     & #navbarContent{
         & a{
-        margin-right: 50px;
+        margin-right: 100px;
         color: black;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.7rem;
+        @include mobile_only{
+            font-size: 3rem;
+        }
         &:hover{
             color: $colorSecondary;
         }
         }
 
+    }
+    @include mobile_only{
+        & img{
+            width: 400px;
+            height: 150px;
+        }
+        
     }
 }
 
@@ -129,9 +138,173 @@ section{
 
 #main{
     width: 100%;
-    margin: 0;
     & img{
         width: 400px;
         height: 300px;
+        @include mobile_only{
+            width: 598px;
+            height: 500px;
+        }
+    }
+}
+
+.list-product{
+    @include mobile_only{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.productList_block{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    border: 2px solid $colorPrimary;
+    & .productList_block--right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-right: 20px;
+        & a{
+            color: $colorPrimary;
+            &:hover{
+                color: lighten($color: $colorPrimary, $amount: 5);
+            }
+        }
+    }
+    @include mobile_only{
+        width: 600px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        flex-direction: column;
+        & .productList_block--left{
+            width: 598px;
+            height: 500px;
+            & img{
+                width: 598px;
+                height: 500px;
+            }
+        }
+        & .productList_block--right{
+            align-items: center;
+            font-size: 2.5rem;
+        }
+        & h2{
+            font-size: 3rem;
+        }
+    }
+}
+
+
+#nameProduct{
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    @include mobile_only{
+        font-size: 3rem;
+    }
+}
+.sheet-product__img{
+    display: flex;
+    justify-content: center;
+}
+.sheet-product__description{
+    border: 2px solid $colorPrimary;
+    margin: 30px;
+    padding: 20px;
+    & .sheet-product__description__order{
+        display: flex;
+        justify-content: center;
+        & #ajouterProduitPanier{
+            background: $cd_degrade;
+            padding: 10px;
+            margin: 20px;
+            border: none;
+        }
+    }
+    @include mobile_only{
+        font-size: 2.5rem;
+        & #ajouterProduitPanier{
+            font-size: 2.5rem;
+            margin-left: 0;
+        }
+    }
+}
+
+#basket-resume{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    font-size: 2rem;
+    & th, td{
+        border: 2px solid #000;
+        padding: 10px;
+    }
+    & .annulerProduit{
+        margin-left: 20px;
+    }
+    @include mobile_only{
+        font-size: 2.5rem;
+    }
+}
+
+form{
+    margin: 60px;
+    & .btn--form{
+        background: $cd_degrade;
+        padding: 10px;
+    }
+    @include mobile_only{
+        font-size: 2.5rem;
+        margin-left: 100px;
+        & legend{
+            font-size: 2.5rem;
+        }
+        & .form-control{
+            font-size: 2rem;
+        }
+        & .btn--form{
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.order-confirm__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    font-size: 2rem;
+    & h2{
+        font-size: 3rem;
+    }
+    @include mobile_only{
+        font-size: 3rem;
+        & h2{
+            font-size: 4rem;
+        }
+    }
+}
+
+#nav-toggle{
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    display: none;
+    @include mobile_only{
+        display: block;
+    }
+}
+
+.bg-light{
+    @include mobile_only{
+    & li{
+        font-size: 3rem;
+    }
     }
 }

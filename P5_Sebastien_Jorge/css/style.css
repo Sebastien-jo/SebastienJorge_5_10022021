@@ -9945,8 +9945,6 @@ h3 {
   }
 }
 .Bloc_0 {
-  margin: 0;
-  padding: 0;
   width: 100%;
   font-family: "Arial", Times, serif;
 }
@@ -9975,13 +9973,24 @@ header .search button {
   background: none;
 }
 header #navbarContent a {
-  margin-right: 50px;
+  margin-right: 100px;
   color: black;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 980px) {
+  header #navbarContent a {
+    font-size: 3rem;
+  }
 }
 header #navbarContent a:hover {
   color: #8F5BFD;
+}
+@media screen and (max-width: 980px) {
+  header img {
+    width: 400px;
+    height: 150px;
+  }
 }
 
 section.container {
@@ -10107,11 +10116,189 @@ section.container .row button:hover {
 
 #main {
   width: 100%;
-  margin: 0;
 }
 #main img {
   width: 400px;
   height: 300px;
+}
+@media screen and (max-width: 980px) {
+  #main img {
+    width: 598px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.productList_block {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px;
+  border: 2px solid #CD7C4D;
+}
+.productList_block .productList_block--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+.productList_block .productList_block--right a {
+  color: #CD7C4D;
+}
+.productList_block .productList_block--right a:hover {
+  color: #d38b61;
+}
+@media screen and (max-width: 980px) {
+  .productList_block {
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-direction: column;
+  }
+  .productList_block .productList_block--left {
+    width: 598px;
+    height: 500px;
+  }
+  .productList_block .productList_block--left img {
+    width: 598px;
+    height: 500px;
+  }
+  .productList_block .productList_block--right {
+    align-items: center;
+    font-size: 2.5rem;
+  }
+  .productList_block h2 {
+    font-size: 3rem;
+  }
+}
+
+#nameProduct {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+@media screen and (max-width: 980px) {
+  #nameProduct {
+    font-size: 3rem;
+  }
+}
+
+.sheet-product__img {
+  display: flex;
+  justify-content: center;
+}
+
+.sheet-product__description {
+  border: 2px solid #CD7C4D;
+  margin: 30px;
+  padding: 20px;
+}
+.sheet-product__description .sheet-product__description__order {
+  display: flex;
+  justify-content: center;
+}
+.sheet-product__description .sheet-product__description__order #ajouterProduitPanier {
+  background: linear-gradient(to bottom right, #CD7C4D, #8F5BFD);
+  padding: 10px;
+  margin: 20px;
+  border: none;
+}
+@media screen and (max-width: 980px) {
+  .sheet-product__description {
+    font-size: 2.5rem;
+  }
+  .sheet-product__description #ajouterProduitPanier {
+    font-size: 2.5rem;
+    margin-left: 0;
+  }
+}
+
+#basket-resume {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+  font-size: 2rem;
+}
+#basket-resume th, #basket-resume td {
+  border: 2px solid #000;
+  padding: 10px;
+}
+#basket-resume .annulerProduit {
+  margin-left: 20px;
+}
+@media screen and (max-width: 980px) {
+  #basket-resume {
+    font-size: 2.5rem;
+  }
+}
+
+form {
+  margin: 60px;
+}
+form .btn--form {
+  background: linear-gradient(to bottom right, #CD7C4D, #8F5BFD);
+  padding: 10px;
+}
+@media screen and (max-width: 980px) {
+  form {
+    font-size: 2.5rem;
+    margin-left: 100px;
+  }
+  form legend {
+    font-size: 2.5rem;
+  }
+  form .form-control {
+    font-size: 2rem;
+  }
+  form .btn--form {
+    font-size: 2.5rem;
+  }
+}
+
+.order-confirm__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  font-size: 2rem;
+}
+.order-confirm__card h2 {
+  font-size: 3rem;
+}
+@media screen and (max-width: 980px) {
+  .order-confirm__card {
+    font-size: 3rem;
+  }
+  .order-confirm__card h2 {
+    font-size: 4rem;
+  }
+}
+
+#nav-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  display: none;
+}
+@media screen and (max-width: 980px) {
+  #nav-toggle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .bg-light li {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

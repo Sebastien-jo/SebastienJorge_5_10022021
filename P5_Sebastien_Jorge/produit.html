@@ -16,22 +16,13 @@
         <header>
     <div class="container-fluid">
       <div class="row">
-        <nav class="col navbar navbar-expand-lg ">
+        <nav class="col navbar ">
           <a class="navbar-brand" href="index.html">
             <img src="images/logoOnorico.png" width="300" height="100" alt="Logo Onorico" />
           </a>
-          <div class="search col-4 text-center">
-            <input type="search" id="itemSearch" aria-label="Search through site content" width="250">
-            <button><i class="fas fa-search"></i></button>
-            </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="navbarContent" class="collapse navbar-collapse">
+          
+          <div id="navbarContent" >
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Se connecter</a>
-              </li>
               <li class="nav-item">
                 <a class="nav-link" href="panier.html"><i class="fas fa-shopping-cart"></i></a>
               </li>
@@ -58,14 +49,14 @@
 					  <p class="sheet-product__description__head">Description :</p>
 					  <p id="descriptionProduct" class="sheet-product__description__resume">
 					  </p>
-					  <label for="optionSelect" class="sheet-product__description__head">Choisissez votre option :</label>
+					  <label for="optionSelect" class="sheet-product__description__head">Options :</label>
 					  <select name="option" id="optionSelect">
 					  	<option value="">Faites votre choix</option>
 					  </select>
 					    <p class="sheet-product__description__head">Prix :</p>
 					    <p id="priceProduct"></p>
 					  <div class="sheet-product__description__order">
-						<button class="btn btn--basket" id="ajouterProduitPanier">Mettre dans le panier</button>
+						<button class="btn btn--basket" id="ajouterProduitPanier">Ajouter le produit au panier</button>
 					</div>
 				</div>
 			</div>
