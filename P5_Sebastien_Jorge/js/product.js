@@ -48,41 +48,6 @@ getProduits = () =>{
 	});
 };
 
-// fonction pour navbar
-function setUpSpecialNavs() {
-    $(".navbar-toggle").click(function(t) {
-        var e = $(this).closest("nav"),
-            i = e.find("ul.site-navigation"),
-            a = i.clone();
-        if (i.parent().hasClass("nav-special"))
-            if (t.stopPropagation(), $(this).hasClass("selected-nav")) $(".blocsapp-special-menu blocsnav").removeClass("open"), $(".selected-nav").removeClass("selected-nav"), setTimeout(function() {
-                $(".blocsapp-special-menu").remove(), $("body").removeClass("lock-scroll"), $(".selected-nav").removeClass("selected-nav")
-            }, 300);
-            else {
-                $(this).addClass("selected-nav");
-                var o = e.attr("class").replace("navbar", "").replace("row", ""),
-                    l = i.parent().attr("class").replace("navbar-collapse", "").replace("collapse", "");
-                ($(".content-tint").length = -1) && $("body").append('<div class="content-tint"></div>'), a.insertBefore(".page-container").wrap('<div class="blocsapp-special-menu ' + o + '"><blocsnav class="' + l + '">'), $("blocsnav").prepend('<a class="close-special-menu animated fadeIn" style="animation-delay:0.5s;"><div class="close-icon"></div></a>'),
-                    function() {
-                        var t = "fadeInRight",
-                            e = 0,
-                            i = 60;
-                        $(".blocsapp-special-menu blocsnav").hasClass("fullscreen-nav") ? (t = "fadeIn", i = 100) : $(".blocsapp-special-menu").hasClass("nav-invert") && (t = "fadeInLeft");
-                        $(".blocsapp-special-menu blocsnav li").each(function() {
-                            $(this).parent().hasClass("dropdown-menu") ? $(this).addClass("animated fadeIn") : (e += i, $(this).attr("style", "animation-delay:" + e + "ms").addClass("animated " + t))
-                        })
-                    }(), setTimeout(function() {
-                        $(".blocsapp-special-menu blocsnav").addClass("open"), $(".content-tint").addClass("on"), $("body").addClass("lock-scroll")
-                    }, 10)
-            }
-    }), $("body").on("mousedown touchstart", ".content-tint, .close-special-menu", function(t) {
-        $(".content-tint").removeClass("on"), $(".selected-nav").click(), setTimeout(function() {
-            $(".content-tint").remove()
-        }, 10)
-    }).on("click", ".blocsapp-special-menu a", function(t) {
-        $(t.target).closest(".dropdown-toggle").length || $(".close-special-menu").mousedown()
-    })
-}
 
 //Création du HTML après appel de l'API
 
@@ -399,7 +364,7 @@ addition = () =>{
   		request.onreadystatechange = function() {
   			if(this.readyState == XMLHttpRequest.DONE && this.status == 201) 
   			{
-          //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans order-confirm.html
+          //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans validation.html
           sessionStorage.setItem("order", this.responseText);
 
           //Chargement de la page de confirmation
