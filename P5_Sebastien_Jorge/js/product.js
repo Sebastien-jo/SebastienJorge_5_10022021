@@ -336,7 +336,7 @@ addition = () =>{
   let etatPanier = JSON.parse(localStorage.getItem("userPanier"));
   //Si le panier est vide ou null (suppression localStorage par)=>alerte
   if(etatPanier == null){
-	//Si l'utilisateur à supprimer son localStorage etatPanier sur la page basket.html et qu'il continue le process de commande
+	//Si l'utilisateur à supprimer son localStorage etatPanier sur la page panier.html et qu'il continue le process de commande
 	alert("Il y a eu un problème avec votre panier, une action non autorisée a été faite. Veuillez recharger la page pour la corriger");
 	return false
 }else if(etatPanier.length < 1 || etatPanier == null){
